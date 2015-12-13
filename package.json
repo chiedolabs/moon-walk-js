@@ -1,0 +1,20 @@
+{
+  "name": "moon-walk",
+  "version": "1.0.0",
+  "description": "Removes trailing indentation at the start of multiple lines",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "JavaScript",
+    "templating"
+  ],
+  "author": "Chiedo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chiedolabs/moon-walk-js.git"
+  }
+}
