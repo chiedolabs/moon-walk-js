@@ -2,9 +2,10 @@
   "name": "moon-walk",
   "version": "1.0.1",
   "description": "Removes trailing indentation at the start of multiple lines",
-  "main": "index.js",
+  "main": "lib/moon-walk.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "./node_modules/.bin/babel -d lib src/"
   },
   "keywords": [
     "Node",
@@ -16,5 +17,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/chiedolabs/moon-walk-js.git"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.3.17"
   }
 }
