@@ -24,7 +24,7 @@ function () {
 With moonwalk:
 
 ```js
-import 'moonwalk' from 'moon-walk';
+import moonwalk from 'moon-walk';
 let y = 0;
   if(true) {
     let x = moonwalk(`
