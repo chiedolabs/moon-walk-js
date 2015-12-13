@@ -1,6 +1,6 @@
 {
   "name": "moon-walk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Removes trailing indentation at the start of multiple lines",
   "main": "lib/moon-walk.js",
   "scripts": {
