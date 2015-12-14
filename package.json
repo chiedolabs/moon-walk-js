@@ -4,7 +4,7 @@
   "description": "Removes trailing indentation at the start of multiple lines",
   "main": "lib/moon-walk.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha tests.js --compilers js:babel-core/register --reporter spec ",
     "prepublish": "./node_modules/.bin/babel -d lib src/"
   },
   "keywords": [
@@ -20,6 +20,10 @@
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",
-    "babel-preset-es2015": "^6.3.13"
+    "babel-core": "^6.3.17",
+    "babel-preset-es2015": "^6.3.13",
+    "chai": "^3.4.1",
+    "lodash.trimleft": "^3.0.2",
+    "mocha": "^2.3.4"
   }
 }

@@ -1,4 +1,5 @@
 'use script';
+import trimLeft from 'lodash.trimleft';
 
 /**
  * Removes trailing indentation at the start of multiple lines
@@ -7,15 +8,15 @@
  * @param {integer} leadingSpaces the number of spaces you would like to keep before each line
  * @returns {string} the new multiline string
  */
-export default function (x, leadingSpaces=0) {
+let moonwalk = function (x, leadingSpaces=0) {
   // Break up by new lines
   let lines = x.split('\n');
 
   // Remove all blank lines
-  lines = lines.filter((line) => line.trim() !== '');
+  lines = lines.filter((line) => trimLeft(line) !== '');
 
   // Find how many leading spaces are in the first line
-  let spacesToRemove = lines[0].length - lines[0].trim().length - leadingSpaces;
+  let spacesToRemove = lines[0].length - trimLeft(lines[0]).length - leadingSpaces;
 
   // Remove that many leading spaces from the beginning of each string
   for(let x = 0; x < lines.length; x++) {
@@ -27,6 +28,10 @@ export default function (x, leadingSpaces=0) {
   }
 
   // Put back into string on seperate lines
-  x = lines.join('\r\n');
+  x = lines.join('\n');
   return x;
+};
+
+if (typeof module !== 'undefined') {
+  module.exports = moonwalk;
 }
