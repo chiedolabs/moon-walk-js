@@ -5,7 +5,7 @@
   "main": "lib/moon-walk.js",
   "scripts": {
     "test": "mocha tests.js --compilers js:babel-core/register --reporter spec ",
-    "prepublish": "./node_modules/.bin/babel-cli -d lib src/"
+    "prepublish": "./node_modules/babel-cli/bin/babel.js -d lib src/"
   },
   "keywords": [
     "Node",
